@@ -1,24 +1,21 @@
 <template>
-  <div >
-    <img alt="Vue logo" src="./assets/logo.png">
-    <h1>{{title}}</h1>
-    <!-- <Ninja /> -->
-    <Ninja />
-    <button class="btn btn-success">Button</button>
-  </div>
+    <div>
+        <ul>
+            <li v-for="(index,ninja) in ninjas"  v-bind:key="index">Name of ninja: {{ninja}}</li>
+        </ul>
+    
+    </div>
 </template>
 
 <script>
-import Ninja from './components/Ninja.vue';
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'app',
-  components: {
-    Ninja
-  },
+  name: 'Ninja',
+  
   data(){
     return{
-      title:"Ninja App"
+        ninjas: ['Abrar', 'Farhad', 'Nirjhar']
     }
   },
   methods:{
