@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VueJS Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+    <div id="root">
+        <!-- <p>{{name}}</p>
+        <p>{{company}}</p>
+        <p>{{greet('Abrar Farhad')}}</p>
+        <a v-bind:href="website">The Net Ninja</a>
+        <br>
+        <input type="text" v-bind:value="company" />
+        <p v-html="websiteTag"></p>
+        <p>Age :{{age}}</p>
+        <button v-on:click.once="add(1)">Add a year</button>
+        <button v-on:click="subtract(1)">Subtract a year</button>
+
+        <button v-on:dblclick="add(10)">Add ten</button>
+        <button v-on:dblclick="subtract(10)">Sub ten</button>
+
+        <div id="canvas" @mousemove="updateXY(event)">{{x}},{{y}}</div>
+
+        <input type="text" v-model="name" />
+        <span>{{name}}</span>
+        <input type="text" v-model="age" />
+        <span >{{age}}</span> -->
+
+        <button @click="error=!error">Toggle error</button>
+        <button @click="success=!success">Toggle success</button>
+        <p v-if="error">THERE IS AN ERROR!!!</p>
+        <p v-else-if="success">SUCCESS</p>
+        <p v-else>Everythin is dying!</p>
+
+        <p v-show="!error">Me or you</p>
+
+        <ul>
+            <li v-for="(ninja, index) in ninjas">{{index+1}}.Name:{{ninja.name}} ||  Age:{{ninja.age}}</li>
+        </ul>
+        <p>{{title}}</p>
+    </div>
+    <div id="app">
+            <p>{{title}}</p>
+            <input v-model="happen" type="text" />
+            <p>{{happen}}</p>
+            <button @click="myfunc()">Click me to change one title</button>
+    </div>
+        
+
+    <script src="app.js"></script>
+
+    
+</body>
+</html>
