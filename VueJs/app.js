@@ -1,3 +1,16 @@
+Vue.component('greetings',{
+    template: '<p>Hey there I am a {{name}}. <button @click="changeName(\'Mario\')\">Change Name</button></p>',
+    data: function(){
+        return {
+            name: "yoshi"
+        }
+    },
+    methods: {
+        changeName:function(name){
+            this.name = name
+        }
+    },
+})
 let one =new Vue({
     el:'#root',
     data:{
@@ -59,3 +72,4 @@ let two = new Vue({
     },
     
 })
+

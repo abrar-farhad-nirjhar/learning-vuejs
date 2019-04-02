@@ -44,12 +44,14 @@
             <li v-for="(ninja, index) in ninjas">{{index+1}}.Name:{{ninja.name}} ||  Age:{{ninja.age}}</li>
         </ul>
         <p>{{title}}</p>
+        <greetings></greetings>
     </div>
     <div id="app">
             <p>{{title}}</p>
             <input v-model="happen" type="text" />
             <p>{{happen}}</p>
             <button @click="myfunc()">Click me to change one title</button>
+            <greetings></greetings>
     </div>
         
 
